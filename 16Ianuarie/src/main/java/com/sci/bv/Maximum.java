@@ -28,10 +28,13 @@ public class Maximum {
         System.out.println("introduceti al treilea numar:");
         int c = keyboard.nextInt();
         int x = Maximum.getMax(a, b);
-        if (x >= c) {
-            System.out.println("maximul este: " + x);
-        } else {
-            System.out.println("maximul este: " + c);
-        }
+
+        // if (x >= c) {
+            // System.out.println("maximul este: " + x);
+        // } else {
+            // System.out.println("maximul este: " + c);
+        // } Am inlocuit secventa de deasupra cu o singura linie, mai jos;
+
+        System.out.println("Maximul este " + getMax(c,x)); // updated code 02 Feb 19
     }
 }

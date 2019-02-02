@@ -16,7 +16,7 @@ public class Clock {
         if (a >= 0 && a <= 12) {
             return a;
         } else {
-            System.out.println("Eroare! Ora inexistenta");
+            System.out.println("Error! Hour not existing");
             return eroare;
         }
     }
@@ -25,7 +25,7 @@ public class Clock {
             if (b >= 0 && b <= 59){
                 return b;
             } else {
-                System.out.println("Eroare! Minute inexistente");
+                System.out.println("Error! Minutes not existing");
                 return eroare;
             }
     }
