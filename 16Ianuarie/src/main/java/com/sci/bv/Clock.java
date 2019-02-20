@@ -2,12 +2,14 @@ package com.sci.bv;
 
 import java.util.Scanner;
 
-public class Clock {
+public class Clock extends Exception{
     /**
-     * this is exercise 3, homework 16.01
+     * this is exercise 3, functions homework
      * Shows the time based on user 2 inputs
      * hour hh and minutes mm
      *
+     * v.02 includes tests
+     * v.03 adds exceptions
      * @author Marian Pescaru
      */
 
@@ -33,11 +35,15 @@ public class Clock {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("What time is it? (introduce hour, press 'enter' and minutes)");
-        int a = keyboard.nextInt();
-        int b = keyboard.nextInt();
-        int hour = Clock.hours(a);
-        int min = Clock.minutes(b);
-        System.out.println("The time is " + hour + ":" + min + " now");
+        try {
+            int a = keyboard.nextInt();
+            int b = keyboard.nextInt();
+            int hour = Clock.hours(a);
+            int min = Clock.minutes(b);
+            System.out.println("The time is " + hour + ":" + min + " now");
+        } catch (Exception e){
+            System.out.println("Invalid input! Please enter a number");
+        }
     }
 }
 

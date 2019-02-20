@@ -2,12 +2,14 @@ package com.sci.bv;
 
 import java.util.Scanner;
 
-public class Fahrenheit {
+public class Fahrenheit extends Exception{
     /**
-     * this is exercise 2, homework 16.01
+     * this is exercise 2, homework functions homework
      * Fahrenheit to Celsius conversion
      * using temperatureConversion() method
      *
+     * v.02 includes tests
+     * v.03 adds exceptions
      * @author Marian Pescaru
      */
 
@@ -16,6 +18,7 @@ public class Fahrenheit {
     }
 
     public static void main(String[] args) {
+        try{
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Please enter body temperature (F):");
         int tempf = keyboard.nextInt();
@@ -27,5 +30,9 @@ public class Fahrenheit {
         if (tempc < 30) {
             System.out.println("You're most likely dead!");
         }
-    }
+    } catch (Exception e){
+            System.out.println("Invalid input! Please enter a number");
+        }
+
+        }
 }
